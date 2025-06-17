@@ -78,8 +78,10 @@ export default function Portfolio() {
           <section>
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-2xl font-mono">My Projects</h2>
-              <Button variant="ghost" size="icon">
-                <span className="sr-only">View all projects</span>→
+              <Button variant="ghost" size="icon" asChild>
+                <Link href="/projects">
+                  <span className="sr-only">View all projects</span>→
+                </Link>
               </Button>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
