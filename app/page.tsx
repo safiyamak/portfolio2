@@ -20,7 +20,7 @@ export default function Portfolio() {
           {/* Profile Header */}
           <div className="flex items-center gap-4">
             <Image
-              src="/placeholder.svg"
+              src="/146744427.png"
               alt="Profile"
               width={60}
               height={60}
