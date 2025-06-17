@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    id: 1,
+    id: 4,
     title: "Butterfly",
     description:
       "Butterfly is a health monitoring application built for autoimmune patients in order to make communication between patients and doctors more efficient. Awarded Hamilton Chamber of Commerce Innovation award.",
@@ -15,22 +15,31 @@ const projects = [
     tags: ["UI/UX", "Mobile Design"],
   },
   {
-    id: 2,
+    id: 3,
     title: "Copyright Guardian",
     description:
       "A hackathon project aimed at artists, allowing them to look for their work and see if it is being used in large multimodal AI databases.",
-    image: "/Screenshot 2025-06-17 at 01-48-43 copyright-guardian-dashboard.png",
+    image:
+      "/Screenshot 2025-06-17 at 01-48-43 copyright-guardian-dashboard.png",
     tags: ["Machine Learning", "React", "Vite", "Typescript", "Python"],
   },
   {
-    id: 3,
+    id: 2,
     title: "Blood Glucose Control",
     description:
       "Worked in design team aimed at improving patient outcomes for those with type 1 diabetes. Currently finding causal effect between blood glucose and fitbit data. Utilizing time series data that is linked to blood glucose.",
     image: "/185291429.png",
     tags: ["Machine Learning", "Python", "RNN", "Time Series Data", "Research"],
   },
-]
+  {
+    id: 1,
+    title: "Transformer Lab",
+    description:
+      "Worked for a local LLM development startup, aimed at making the process of training, finetuning, and evaluating LLM's more accessible. Main project involved multimodal chat integration, involving complex integrations of various open source repos.",
+    image: "/logo2.svg",
+    tags: ["Machine Learning", "Python", "RNN", "Time Series Data", "Research"],
+  },
+];
 
 export default function ProjectsPage() {
   return (
@@ -45,7 +54,9 @@ export default function ProjectsPage() {
           </Button>
           <div>
             <h1 className="text-4xl font-mono">My Projects</h1>
-            <p className="text-gray-400 mt-2">A collection of my recent work and design explorations</p>
+            <p className="text-gray-400 mt-2">
+              A collection of my recent work and design explorations
+            </p>
           </div>
         </div>
 
@@ -66,11 +77,18 @@ export default function ProjectsPage() {
               </div>
 
               <div className="space-y-3">
-                <h3 className="text-xl font-mono group-hover:text-blue-400 transition-colors">{project.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{project.description}</p>
+                <h3 className="text-xl font-mono group-hover:text-blue-400 transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">
+                    <span
+                      key={tag}
+                      className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full"
+                    >
                       {tag}
                     </span>
                   ))}
@@ -83,12 +101,14 @@ export default function ProjectsPage() {
         {/* Call to Action */}
         <div className="text-center mt-16 p-8 bg-gray-900 rounded-xl">
           <h2 className="text-2xl font-mono mb-4">Like what you see?</h2>
-          <p className="text-gray-400 mb-6">Let's work together to bring your ideas to life</p>
+          <p className="text-gray-400 mb-6">
+            Let's work together to bring your ideas to life
+          </p>
           <Button variant="outline" className="rounded-full">
             Get in Touch
           </Button>
         </div>
       </div>
     </div>
-  )
+  );
 }
